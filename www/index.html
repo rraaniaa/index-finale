@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" dir="rtl" />
+    <title>login</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <form onsubmit="checkUser(event)">
+      <div class="screen-1">
+        <div>
+          <img src="./téléchargement.png" />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="email">
+          <label for="email">الاسم</label>
+          <div class="sec-2">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input
+              type="text"
+              name="login"
+              placeholder="firstName.lastName"
+              id="login"
+            />
+          </div>
+        </div>
+        <div class="password">
+          <label for="password">كلمة المرور</label>
+          <div class="sec-2">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input
+              class="pas"
+              type="password"
+              name="pwd"
+              placeholder="············"
+              id="pwd"
+            />
+            <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+          </div>
+        </div>
+        <button type="submit" class="login">الدخول</button>
+        <span id="error"></span>
+        <div class="footer">
+          <span onclick="window.location.href = `./signup.html`;">حساب جديد</span>
+        </div>
+      </div>
+
+      <ul id="drafts"></ul>
+      <!-- partial -->
+    </form>
+    <script src="database.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

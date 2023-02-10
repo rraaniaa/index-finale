@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap"
+      rel="stylesheet"
+    />
+    <title>membre de menage</title>
+  </head>
+  <body>
+    <div id="container">
+      <table
+        class="table table-hover table-striped shadow p-3 mb-5 bg-body-tertiary rounded"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+              colspan="2"
+              style="text-align: center"
+              class="bg-primary-subtle"
+            >
+              <h3 class="text-primary heading-primary">الاسم و اللقب</h3>
+              <p>حسب الترتيب التالي :</p>
+              <p>رئيس الاسرة و زوجته</p>
+              <p>الابناء العزاب ابتداء من اصغرهم سنا</p>
+              <p>الابناء المتزوجين و افراد عائلتهم</p>
+              <p>بقية الاقارب</p>
+              <p>بقية الافراد غير الاقارب</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">1</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength=""
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">2</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">3</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">4</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">5</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">6</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">7</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">8</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">9</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row"><div style="margin-top: 8px">10</div></th>
+            <td>
+              <input
+                class="names form-control"
+                type="text"
+                minlength="3"
+                maxlength="50"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 style="text-align: center">
+        <button class="btn btn-success btn-lg" onclick="next()">
+          المرحلة الثانية
+        </button>
+      </h2>
+    </div>
+
+    <style>
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      table {
+        max-width: 400px;
+        margin: 10px auto;
+        overflow: hidden;
+      }
+    </style>
+
+    <script src="membre_menage.js"></script>
+  </body>
+</html>

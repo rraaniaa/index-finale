@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>echantillon</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body onload="recuperation()">
+    <div class="searchBox">
+      <div style="max-width: 500px; margin: 20px auto">
+        <div>
+          <img src="./téléchargement.png " style="width: 400px" />
+          <br />
+          <br />
+        </div>
+        <h1 dir="rtl" lang="ar" style="text-align: center">
+          المسح الوطني حول واقع المراة
+        </h1>
+        <h2 dir="rtl" lang="ar" style="text-align: center">
+          الاستمارة المعيشية :
+        </h2>
+
+        <form onsubmit="insertData(event)">
+          <table
+            class="table table-striped shadow p-3 mb-5 bg-body-tertiary rounded"
+          >
+            <tr>
+              <td colspan="2">
+                <p><strong>الترخيص </strong></p>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div style="text-align: justify">
+                  هـــــــام : تنطبق على هذا المسح أحكام القانون عدد 32 لسنة
+                  1999 المؤرخ في 13 أفريل 1999 والمتعلق بالمنظومة الوطنية
+                  لإلحصاء وخاصة منها الفصول 5 و 6 و 26: ق الفصل 5 بالسر اإلحصائي
+                  الذي يتمثل في عدم الكشف من قبل المصلحة التي تمتلك المعلومة عن
+                  المعطيات الشخصية المضمنة باستمارات ويتعل المسوحات اإلحصائية مع
+                  اإلشارة إلى أنه ال يمكن إستعمال المعلومات الشخصية ذات الصبغة
+                  اإلقتصادية أو المالية لغايات ذات عالقة بالمراقبة الجبائية أو
+                  اإلقتصادية أو اإلجتماعية. ّة وفي اآلجال المحددة على استمارات
+                  المسوحات اإلحصائية. ويطالب الفصل 6 األشخاص الطبيعيين
+                  والمعنويين باإلجابة بكل دق وينص الفصل 26 على اإلجراءات الممكن
+                  اتخاذها عند اإلمتناع عن اإلجابة على استمارات المسوحات
+                  اإلحصائية أو اإلدالء بإجابات منقوصة أو غير صحيحة.
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <th colspan="2">التعريف الجغرافي للاسرة</th>
+            </tr>
+            <tr>
+              <th>
+                <label for="dewey">الولاية:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="gouv"
+                  name="gouv"
+                  required
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                <label for="dewey">العنوان:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="adresse"
+                  name="adresse"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="dewey">اسم رئيس الاسرة:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="nom-chef-f"
+                  name="nom-chef-f"
+                  required
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                <label for="dewey">اسم الفرد المستوجب:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="nom-p"
+                  name="nom-p"
+                  required
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th colspan="2">التعريف الاحصائي للاسرة</th>
+            </tr>
+
+            <tr>
+              <th>
+                <label for="dewey">المنطقة:</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="dis"
+                  name="dis"
+                  required
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                <label for="tentacles">العدد الرتبي للاسرة</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="num-m"
+                  name="num-m"
+                  required
+                  min="1"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="phone">رقم هاتف رئيس الاسرة</label>
+              </th>
+              <td>
+                <input
+                  type="tel"
+                  class="input-group-text"
+                  id="phone-f"
+                  name="phone-f"
+                  required
+                  minlength="8"
+                  maxlength="8"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="phone">رقم هاتف الفرد المستوجب</label>
+              </th>
+              <td>
+                <input
+                  type="text"
+                  class="input-group-text"
+                  id="phone-p"
+                  name="phone-p"
+                  required
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+
+          <h2 style="text-align: center">
+            <button class="btn btn-success btn-lg">تابع</button>
+          </h2>
+        </form>
+      </div>
+      <p id="afficher_cont"></p>
+    </div>
+    <script src="database.js"></script>
+    <script src="echantillon.js"></script>
+  </body>
+</html>

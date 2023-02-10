@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>affichage</title>
+  </head>
+
+  <body>
+    <form>
+      <div id="res"></div>
+    </form>
+  </body>
+
+  <style>
+    input[type="button"] {
+      width: 150px;
+      padding: 10px;
+
+      background-color: green;
+      color: aliceblue;
+    }
+  </style>
+  <script>
+    if (!window.openDatabase) {
+      alert("ERROR");
+    } else {
+      var db = openDatabase("store.db", "1.0", "table-echant", 1024 * 1024 * 5);
+    }
+
+    db.transaction(function (tx) {
+      tx.executeSql("select * from echantillon ", [], function (tx, res) {
+        var html = `<table class="table table-striped shadow p-3 mb-5 bg-body-tertiary rounded" >
+          <thead>
+                     <tr>
+                        <th><div>المنطقة</div></th>
+                        <th><div>الولاية</div></th>
+                        <th><div>العدد الرتبي للاسرة</div></th>
+                        <th><div>اسم رئيس الاسرة</div></th>
+                        <th><div>العنوان</div></th>
+                        <th></th>
+                     </tr> </thead>      
+                        `;
+
+        for (i = 0; i < res.rows.length; i++) {
+          var row = res.rows[i];
+          html +=
+            "<tbody> <tr><td>" +
+            row.code_district +
+            "<td>" +
+            row.gouvernorat +
+            "<td>" +
+            row.num_m +
+            "<td>" +
+            row.nom_chef_f +
+            "<td>" +
+            row.adresse +
+            '<td><input class="btn btn-success" type="button" value="تابع"  onclick="appel_menage(' +
+            row.code_district +
+            "," +
+            row.num_m +
+            ') "> ' +
+            "</td></tr> </tbody>";
+        }
+        document.getElementById("res").innerHTML = html;
+      });
+    });
+
+    function appel_menage(code_district, num_m) {
+      sessionStorage.setItem("code_district", code_district);
+      sessionStorage.setItem("num_m", num_m);
+
+      window.location.href = "./page1.html";
+    }
+  </script>
+  <style>
+  </style>
+</html>
